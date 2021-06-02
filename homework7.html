@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con>div{
+            height:60px;
+            color:white;
+            text-align:center;
+            line-height:60px;
+        }
+        .con{
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+        }
+        .con>div:nth-child(1){
+            background:red;
+        }
+        .con>div:nth-child(2){
+            background:blue;
+        }
+        .con>div:nth-child(3){
+            background:black;
+        }
+        .con>div:nth-child(4){
+            background:orange;
+        }
+        @media screen and (min-width:1200px){
+            .con>div{
+                width:250px;
+            }
+        }
+        @media screen and (min-width:992px) and (max-width:1200px){
+            .con>div:nth-child(2),.con>div:nth-child(3),.con>div:nth-child(4){
+                width:300px;
+            }
+            .con>div:nth-child(1){
+                width:900px;
+            }
+        }
+        @media screen and (min-width:768px) and (max-width:992px){
+            .con>div{
+                width:350px;
+            }
+        }
+        @media screen and (max-width:768px){
+            .con>div{
+                width:600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class='con'>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>
